@@ -3,6 +3,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserModule } from './user/user.module';
+import { SpaceModule } from './space/space.module';
+import { ReservationModule } from './reservation/reservation.module';
 import config from './app.config';
 
 
@@ -22,7 +24,9 @@ import config from './app.config';
       autoLoadEntities: true,
       synchronize: true,
     }),
-    UserModule
+    UserModule,
+    SpaceModule,
+    ReservationModule
   ],
   controllers: [AppController],
   providers: [AppService],

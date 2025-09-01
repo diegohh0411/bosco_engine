@@ -17,7 +17,7 @@ export class User {
     @Column()
     family_name: string;
 
-    @Column()
+    @Column({ unique: true })
     email: string;
 
     @Column({ enum: UserRole, default: UserRole.base })
